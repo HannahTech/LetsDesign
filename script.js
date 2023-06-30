@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", function () {
   function autoScroll() {
     const scrollPercentage = calculateScrollPercentage();
 
-    if (scrollPercentage < 30) {
+    if (scrollPercentage < 20) {
       window.scrollBy(0, 1);
       setTimeout(autoScroll, 10);
     }
