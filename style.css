@@ -248,7 +248,7 @@ body {
   padding-top: 5%;
   border-bottom: 0.5px solid black;
   color: black;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .luxury-container {
@@ -321,7 +321,7 @@ body {
 
 .image-preview {
   position: absolute;
-  top: -200%;
+  top: -75%;
   left: 0;
   width: 100%;
   height: 200%;
@@ -357,6 +357,37 @@ body {
   }
 }
 
+.several-projects-container {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  margin: 0 auto;
+  padding-top: 3%;
+  text-align: center;
+  background-color: rgb(247, 248, 250);
+  z-index: 10;
+}
+
+.several-projects {
+  text-align: center;
+  margin: 0 auto;
+  width: auto;
+  padding: 2% 15%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  row-gap: 4%;
+  column-gap: 2%;
+  justify-items: center;
+  align-content: center;
+}
+
+.several-projects .image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-size: cover;
+  transition: background-image 0.3s ease-in-out;
+}
+
 .footer {
   text-align: center;
   font-size: 35px;
@@ -368,7 +399,7 @@ body {
 
 .footer a {
   text-decoration: none;
-  color: rgb(57, 58, 60);
+  color: #8e8e8e;
   position: absolute;
   transition: color 1s;
 }
@@ -386,5 +417,5 @@ body {
 }
 
 .footer a:hover {
-  color: #9e9e9e;
+  color: rgb(57, 58, 60);
 }
