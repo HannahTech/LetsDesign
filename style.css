@@ -360,10 +360,10 @@ body {
 .several-projects-container {
   position: relative;
   width: 100%;
-  height: 40vh;
+  height: 55vh;
   margin: 0 auto;
-  padding-top: 3%;
   text-align: center;
+  padding-top: 10%;
   background-color: rgb(247, 248, 250);
   z-index: 10;
 }
@@ -371,21 +371,20 @@ body {
 .several-projects {
   text-align: center;
   margin: 0 auto;
-  width: auto;
-  padding: 2% 15%;
+  width: 60%;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  row-gap: 4%;
-  column-gap: 2%;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 15%;
+  column-gap: 0;
   justify-items: center;
   align-content: center;
 }
 
-.several-projects .image {
-  width: 100%;
+.several-projects .projects-image {
+  width: 80%;
   aspect-ratio: 1/1;
   background-size: cover;
-  transition: background-image 0.3s ease-in-out;
+  transition: background-image 0.75s easx 2e-in-out;
 }
 
 .footer {

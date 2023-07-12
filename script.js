@@ -122,56 +122,36 @@ var originalImages = [
   "url(images/heto/4.jpg)",
   "url(images/heto/5.jpg)",
   "url(images/heto/6.jpg)",
-  "url(images/heto/6.jpg)",
-  "url(images/heto/5.jpg)",
-  "url(images/heto/4.jpg)",
-  "url(images/heto/3.jpg)",
-  "url(images/heto/2.jpg)",
+  "url(images/heto/1-2.jpg)",
+  "url(images/heto/2-2.jpg)",
+];
+
+var hoverImages = [
+  "url(images/heto/1-2.jpg)",
+  "url(images/heto/2-2.jpg)",
+  "url(images/heto/3-2.jpg)",
+  "url(images/heto/4-2.jpg)",
+  "url(images/heto/5-2.jpg)",
+  "url(images/heto/6-2.jpg)",
   "url(images/heto/1.jpg)",
+  "url(images/heto/2.jpg)",
 ];
 
-var imageSelectors = [
-  ":nth-child(1)",
-  ":nth-child(2)",
-  ":nth-child(3)",
-  ":nth-child(4)",
-  ":nth-child(5)",
-  ":nth-child(6)",
-  ":nth-child(7)",
-  ":nth-child(8)",
-  ":nth-child(9)",
-  ":nth-child(10)",
-  ":nth-child(11)",
-  ":nth-child(12)",
-];
+const projectsImages = document.querySelectorAll(".projects-image");
 
-function hoverImages() {
-  var images = document.querySelectorAll(".several-projects .image");
-  var delay = 250;
+projectsImages.forEach((image, index) => {
+  image.style.backgroundImage = originalImages[index];
 
-  for (var i = 0; i < images.length; i++) {
-    (function (index) {
-      setTimeout(function () {
-        var imageName = originalImages[index].split("/").pop().split(".")[0];
+  image.addEventListener("mouseenter", () => {
+    image.style.transition = "background-image 1s";
+    image.style.backgroundImage = hoverImages[index];
+  });
 
-        images[index].style.backgroundImage =
-          "url(images/heto/" + imageName + "-2.jpg)";
-      }, delay * index);
-    })(i);
-  }
-}
-
-function resetImages() {
-  var images = document.querySelectorAll(".several-projects .image");
-  for (var i = 0; i < images.length; i++) {
-    images[i].style.backgroundImage = originalImages[i];
-  }
-}
-
-var images = document.querySelectorAll(".several-projects .image");
-for (var i = 0; i < images.length; i++) {
-  images[i].classList.add("image" + imageSelectors[i]);
-}
+  image.addEventListener("mouseleave", () => {
+    image.style.transition = "background-image 1s";
+    image.style.backgroundImage = originalImages[index];
+  });
+});
 
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
