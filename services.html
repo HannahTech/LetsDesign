@@ -179,11 +179,11 @@
     <div class="all-text">
       <form
         data-netlify="true"
-        name="priceListForm"
+        name="generalForm"
         method="post"
         onsubmit="submitForm(event)"
       >
-        <input type="hidden" name="form-name" value="priceListForm" />
+        <input type="hidden" name="form-name" value="generalForm" />
 
         <div id="step1" style="display: block">
           <h2>1 / 3 ...</h2>
@@ -315,7 +315,7 @@
         });
 
         var formData = new FormData();
-        formData.append("form-name", "priceListForm");
+        formData.append("form-name", "generalForm");
         formData.append("firstName", userName);
         formData.append("emailAddress", userEmail);
         selectedServices.forEach(function (service) {
