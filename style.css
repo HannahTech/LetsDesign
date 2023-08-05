@@ -29,7 +29,7 @@ body {
   text-align: left;
   color: transparent;
   font-size: 30px;
-  transform: translateY(0);
+  transform: translateY(-25%);
   transition: transform 3s;
   position: absolute;
   top: 10%;
@@ -46,6 +46,16 @@ body {
 
 .menu:hover {
   cursor: pointer;
+}
+
+.heading-text {
+  font-family: "Coldiac";
+  margin-top: -5%;
+  margin-bottom: 10%;
+  text-align: left;
+  font-size: 18px;
+  left: 0;
+  width: 100%;
 }
 
 .first-text-container {
@@ -135,8 +145,8 @@ body {
 
 .text {
   position: absolute;
-  right: 10%;
-  bottom: 0;
+  right: 15%;
+  bottom: 1%;
   transform-origin: bottom right;
   transform: rotate(-90deg) translateX(97%);
   white-space: nowrap;
@@ -155,10 +165,12 @@ body {
 }
 
 .text p {
-  font-size: 1.25em;
+  font-size: 1.75em;
   font-weight: 600;
 }
 .text span {
+  display: none;
+  font-size: 1.5em;
   font-weight: 100;
 }
 
@@ -178,7 +190,8 @@ body {
 
 .vertical-part.non-hover {
   opacity: 0.3;
-  filter: brightness(0.5);
+  /* filter: brightness(0.5); */
+  filter: grayscale(1);
 }
 
 .vertical-part.non-hover .number {
@@ -192,13 +205,14 @@ body {
 
 .vertical-part:hover .text {
   color: white;
-  top: 30%;
+  /* top: 10%; */
   left: 20%;
+  bottom: 5%;
   width: 75%;
   opacity: 1;
   z-index: 1;
   text-align: left;
-  transform: translate(-10%, -20%) rotate(0deg);
+  transform: translate(-10%, -10%) rotate(0deg);
   white-space: normal;
 }
 
@@ -221,7 +235,7 @@ body {
   font-family: "Coldiac";
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 70vh;
   margin: 0 auto;
   padding-top: 5%;
   text-align: center;
@@ -253,19 +267,24 @@ body {
 
 .luxury-container {
   position: relative;
-  height: 30vh;
+  height: 50vh;
   width: 100%;
-  background-color: #f8f8fa;
+  margin-top: 4%;
+  /* background-color: #f8f8fa; */
+  background-image: url(images/w1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   overflow: hidden;
 }
 
 .luxury-image {
   position: absolute;
   overflow: hidden;
-  background-image: url(images/73.jpg);
+  background-image: url(images/w2.png);
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: right bottom;
+  background-size: 85% auto;
+  background-position: center 52.5%;
   min-width: 100%;
   min-height: 100%;
   display: block;
@@ -360,17 +379,13 @@ body {
 .several-projects-container {
   position: relative;
   width: 100%;
-  height: 55vh;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 10%;
   background-color: rgb(247, 248, 250);
   z-index: 10;
 }
 
 .several-projects {
-  text-align: center;
   margin: 0 auto;
+  padding: 6% 0;
   width: 60%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -417,4 +432,55 @@ body {
 
 .footer a:hover {
   color: rgb(57, 58, 60);
+}
+
+@media (orientation: portrait) {
+  .first-text-container {
+    height: 65vh;
+  }
+  .text-container {
+    display: none !important;
+  }
+
+  .container {
+    top: 5%;
+    width: 100%;
+    height: 60vh;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  .vertical-part {
+    flex-basis: 12.5vh;
+    width: 65%;
+    padding-bottom: 2%;
+  }
+
+  .image-container {
+    height: 100%;
+    padding-top: 0;
+  }
+
+  .text {
+    right: 5%;
+    bottom: 50%;
+    transform: rotate(0deg) translateX(0%);
+    padding: 0rem;
+    color: black;
+    z-index: 1;
+    width: 90%;
+    text-align: right;
+  }
+
+  .text p {
+    margin: 2% 0;
+    padding: 0;
+  }
+
+  .number {
+    bottom: -5%;
+    left: 0%;
+    font-size: 5rem;
+  }
 }

@@ -1,6 +1,7 @@
 window.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector(".menu");
   const container = document.querySelector(".container");
+
   const containerOffsetTop = container.offsetTop;
   let isMenuSticky = false;
 
@@ -92,7 +93,7 @@ const verticalParts = document.querySelectorAll(".vertical-part");
 const responsibleWidth = 950;
 const luxuryImage = document.querySelector(".luxury-image");
 const containerWidth = luxuryImage.offsetWidth;
-const initialPosition = containerWidth - window.innerWidth + 15;
+const initialPosition = containerWidth - window.innerWidth + 45;
 const scrollImage = window.innerWidth > responsibleWidth ? 60 : 45;
 
 verticalParts.forEach((part) => {
