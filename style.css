@@ -128,15 +128,15 @@ body {
 }
 
 .image.image-1 {
-  background-image: url("images/01.jpg");
+  background-image: url("images/01-bb.jpg");
 }
 
 .image.image-2 {
-  background-image: url("images/02.jpg");
+  background-image: url("images/022-bb.jpeg");
 }
 
 .image.image-3 {
-  background-image: url("images/03.jpeg");
+  background-image: url("images/03-bb.jpg");
 }
 
 .image.image-4 {
@@ -165,12 +165,12 @@ body {
 }
 
 .text p {
-  font-size: 1.75em;
+  font-size: 200%;
   font-weight: 600;
 }
 .text span {
   display: none;
-  font-size: 1.5em;
+  font-size: 120%;
   font-weight: 100;
 }
 
@@ -190,7 +190,6 @@ body {
 
 .vertical-part.non-hover {
   opacity: 0.3;
-  /* filter: brightness(0.5); */
   filter: grayscale(1);
 }
 
@@ -205,9 +204,8 @@ body {
 
 .vertical-part:hover .text {
   color: white;
-  /* top: 10%; */
   left: 20%;
-  bottom: 5%;
+  top: -15%;
   width: 75%;
   opacity: 1;
   z-index: 1;
@@ -218,10 +216,10 @@ body {
 
 .vertical-part:hover .text a {
   display: block;
-  text-decoration: none;
+  text-decoration: underline;
   color: white;
   text-align: center;
-  padding-top: 150px;
+  padding-top: 30%;
 }
 
 .vertical-part:hover .text span {
@@ -270,7 +268,6 @@ body {
   height: 50vh;
   width: 100%;
   margin-top: 4%;
-  /* background-color: #f8f8fa; */
   background-image: url(images/w1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
