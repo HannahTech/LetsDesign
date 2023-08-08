@@ -448,7 +448,12 @@ body {
 
   .text {
     font-size: 6px;
-    right: 20%;
+    right: 2%;
+  }
+  .text p {
+    white-space: normal;
+    line-height: 1.2;
+    width: 120%;
   }
   .number {
     font-size: 2rem;
@@ -477,6 +482,10 @@ body {
     grid-template-rows: repeat(2, 1fr);
     gap: 5%;
   }
+  .image-container {
+    height: 100%;
+  }
+
   .image-wrapper {
     width: 100px;
     height: 100px;

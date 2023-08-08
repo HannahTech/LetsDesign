@@ -2,7 +2,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector(".menu");
   const container = document.querySelector(".container");
 
-  const containerOffsetTop = container.offsetTop;
+  const containerOffsetTop = container.offsetTop - 200;
 
   let isMenuSticky = false;
 
@@ -25,7 +25,7 @@ window.addEventListener("DOMContentLoaded", function () {
     const scrollPercentage = calculateScrollPercentage();
 
     const scrollThreshold = window.matchMedia("(orientation: portrait)").matches
-      ? 30
+      ? 20
       : 30;
 
     if (scrollPercentage < scrollThreshold) {
