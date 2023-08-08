@@ -63,9 +63,9 @@ window.addEventListener("DOMContentLoaded", function () {
 
       if (window.matchMedia("(orientation: portrait)").matches) {
         if (opacity < 0.3) {
-          image.style.width = "35%";
-        } else {
           image.style.width = "100%";
+        } else {
+          image.style.width = "35%";
         }
       } else {
         if (opacity < 0.3) {
