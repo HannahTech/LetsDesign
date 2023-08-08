@@ -25,7 +25,7 @@ window.addEventListener("DOMContentLoaded", function () {
     const scrollPercentage = calculateScrollPercentage();
 
     const scrollThreshold = window.matchMedia("(orientation: portrait)").matches
-      ? 20
+      ? 7
       : 30;
 
     if (scrollPercentage < scrollThreshold) {
@@ -59,12 +59,13 @@ window.addEventListener("DOMContentLoaded", function () {
 
     imageContainers.forEach((container) => {
       const image = container.querySelector(".image");
+      const imageText = container.querySelector(".text");
 
       if (window.matchMedia("(orientation: portrait)").matches) {
         if (opacity < 0.3) {
           image.style.width = "35%";
         } else {
-          image.style.width = "35%";
+          image.style.width = "100%";
         }
       } else {
         if (opacity < 0.3) {
