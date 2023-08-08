@@ -56,7 +56,7 @@ body {
   font-size: 15px;
   width: 100%;
   position: fixed;
-  top: 17%;
+  top: 15%;
 }
 
 .first-text-container {
@@ -119,7 +119,7 @@ body {
 
 .image-container .image {
   position: absolute;
-  top: 0;
+  top: 25%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -481,6 +481,7 @@ body {
   }
 
   .image-container .image {
+    top: 0%;
     width: 100%;
   }
 

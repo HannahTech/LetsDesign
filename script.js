@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     const scrollThreshold = window.matchMedia("(orientation: portrait)").matches
       ? 7
-      : 30;
+      : 25;
 
     if (scrollPercentage < scrollThreshold) {
       window.scrollBy(0, 1);
