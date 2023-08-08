@@ -56,7 +56,7 @@ body {
   font-size: 15px;
   width: 100%;
   position: fixed;
-  top: 10%;
+  top: 17%;
 }
 
 .first-text-container {
@@ -89,7 +89,7 @@ body {
 
 .container {
   position: fixed;
-  top: 35%;
+  top: 40%;
   width: 80%;
   padding-left: 10%;
   display: flex;
@@ -432,18 +432,18 @@ body {
   }
   .menu {
     font-size: 25px;
-    top: 5%;
+    top: 8%;
   }
 
   .heading-text {
     font-size: 10px;
     width: 90vw;
-    top: 5%;
+    top: 10%;
     padding: 0 5%;
   }
 
   .container {
-    top: 25%;
+    top: 30%;
   }
 
   .text {

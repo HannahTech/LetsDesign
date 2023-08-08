@@ -2,7 +2,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector(".menu");
   const container = document.querySelector(".container");
 
-  const containerOffsetTop = container.offsetTop - 75;
+  const containerOffsetTop = container.offsetTop;
 
   let isMenuSticky = false;
 
