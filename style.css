@@ -208,7 +208,7 @@ body {
 .vertical-part:hover .text {
   color: white;
   left: 20%;
-  top: -15%;
+  top: -40%;
   width: 75%;
   opacity: 1;
   z-index: 1;
@@ -461,7 +461,7 @@ body {
   }
 
   .vertical-part:hover .text {
-    top: -40%;
+    top: -80%;
   }
 
   .vertical-part:hover .text p {
