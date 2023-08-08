@@ -19,6 +19,7 @@ html,
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -29,7 +30,7 @@ body {
   text-align: left;
   color: transparent;
   font-size: 30px;
-  transform: translateY(-25%);
+  transform: translateY(0);
   transition: transform 3s;
   position: absolute;
   top: 10%;
@@ -50,12 +51,12 @@ body {
 
 .heading-text {
   font-family: "Coldiac";
-  margin-top: -5%;
-  margin-bottom: 10%;
+  padding-left: 10%;
   text-align: left;
-  font-size: 18px;
-  left: 0;
+  font-size: 15px;
   width: 100%;
+  position: fixed;
+  top: 10%;
 }
 
 .first-text-container {
@@ -88,10 +89,9 @@ body {
 
 .container {
   position: fixed;
-  top: 20%;
-  width: 90%;
-  height: 60%;
-  padding-left: 5%;
+  top: 35%;
+  width: 80%;
+  padding-left: 10%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -144,8 +144,11 @@ body {
 }
 
 .text {
+  font-family: "Coldiac";
+  /* Coldiac
+  Nord-Bold*/
   position: absolute;
-  right: 15%;
+  right: 25%;
   bottom: 1%;
   transform-origin: bottom right;
   transform: rotate(-90deg) translateX(97%);
@@ -214,13 +217,13 @@ body {
   white-space: normal;
 }
 
-.vertical-part:hover .text a {
+/* .vertical-part:hover .text a {
   display: block;
   text-decoration: underline;
   color: white;
   text-align: center;
   padding-top: 30%;
-}
+} */
 
 .vertical-part:hover .text span {
   padding-top: 50px;
@@ -382,7 +385,7 @@ body {
 
 .several-projects {
   margin: 0 auto;
-  padding: 6% 0;
+  padding: 10% 0;
   width: 60%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -400,31 +403,20 @@ body {
 }
 
 .footer {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 35px;
-  height: 75px;
-  padding-top: 2%;
+  padding: 3%;
   background-color: white;
-  position: relative;
 }
 
 .footer a {
+  display: inline-block;
+  margin: 0 10%;
   text-decoration: none;
   color: #8e8e8e;
-  position: absolute;
   transition: color 1s;
-}
-.footer a:first-child {
-  left: 15%;
-}
-
-.footer a:nth-child(2) {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.footer a:last-child {
-  right: 15%;
 }
 
 .footer a:hover {
@@ -432,52 +424,105 @@ body {
 }
 
 @media (orientation: portrait) {
-  .first-text-container {
-    height: 65vh;
-  }
   .text-container {
     display: none !important;
   }
+  .first-text-container {
+    height: 60vh;
+  }
+  .menu {
+    font-size: 25px;
+    top: 5%;
+  }
+
+  .heading-text {
+    font-size: 10px;
+    width: 90vw;
+    top: 5%;
+    padding: 0 5%;
+  }
 
   .container {
-    top: 5%;
-    width: 100%;
-    height: 60vh;
-    flex-direction: column;
-    margin: 0 auto;
-    padding-left: 0;
-  }
-
-  .vertical-part {
-    flex-basis: 12.5vh;
-    width: 65%;
-    padding-bottom: 2%;
-  }
-
-  .image-container {
-    height: 100%;
-    padding-top: 0;
+    top: 25%;
   }
 
   .text {
-    right: 5%;
-    bottom: 50%;
-    transform: rotate(0deg) translateX(0%);
-    padding: 0rem;
-    color: black;
-    z-index: 1;
-    width: 90%;
-    text-align: right;
+    font-size: 6px;
+    right: 20%;
   }
-
-  .text p {
-    margin: 2% 0;
-    padding: 0;
-  }
-
   .number {
-    bottom: -5%;
-    left: 0%;
-    font-size: 5rem;
+    font-size: 2rem;
+    left: 0;
+  }
+
+  .vertical-part:hover .text {
+    top: -40%;
+  }
+
+  .vertical-part:hover .text p {
+    font-size: 8px;
+  }
+
+  .vertical-part:hover .text span {
+    padding-top: 5px;
+  }
+  .project-container-base h1 {
+    font-size: 18px;
+  }
+  .project-container {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5%;
+  }
+  .image-wrapper {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
+  .image-preview {
+    top: -150%;
+    height: 250%;
+    z-index: 200;
+  }
+  .text-part h1,
+  .text-part a {
+    font-size: 20px;
+  }
+  .text-part h2 {
+    padding-top: 5%;
+    font-size: 15px;
+  }
+  .luxury-container {
+    height: 25vh;
+  }
+  .text-part {
+    height: auto;
+  }
+  .several-projects-container {
+    padding: 20% 0;
+  }
+  .several-projects {
+    width: 75%;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+    row-gap: 6%;
+  }
+
+  .footer {
+    padding: 10% 0;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: left;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .footer a {
+    display: block;
+    margin: 0 15%;
   }
 }

@@ -2,7 +2,8 @@ window.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector(".menu");
   const container = document.querySelector(".container");
 
-  const containerOffsetTop = container.offsetTop;
+  const containerOffsetTop = container.offsetTop - 75;
+
   let isMenuSticky = false;
 
   function toggleStickyMenu() {
@@ -23,7 +24,11 @@ window.addEventListener("DOMContentLoaded", function () {
   function autoScroll() {
     const scrollPercentage = calculateScrollPercentage();
 
-    if (scrollPercentage < 20) {
+    const scrollThreshold = window.matchMedia("(orientation: portrait)").matches
+      ? 30
+      : 30;
+
+    if (scrollPercentage < scrollThreshold) {
       window.scrollBy(0, 1);
       setTimeout(autoScroll, 10);
     }
@@ -55,10 +60,18 @@ window.addEventListener("DOMContentLoaded", function () {
     imageContainers.forEach((container) => {
       const image = container.querySelector(".image");
 
-      if (opacity < 0.3) {
-        image.style.width = "65%";
+      if (window.matchMedia("(orientation: portrait)").matches) {
+        if (opacity < 0.3) {
+          image.style.width = "35%";
+        } else {
+          image.style.width = "35%";
+        }
       } else {
-        image.style.width = "100%";
+        if (opacity < 0.3) {
+          image.style.width = "50%";
+        } else {
+          image.style.width = "100%";
+        }
       }
     });
 
@@ -93,7 +106,7 @@ const verticalParts = document.querySelectorAll(".vertical-part");
 const responsibleWidth = 950;
 const luxuryImage = document.querySelector(".luxury-image");
 const containerWidth = luxuryImage.offsetWidth;
-const initialPosition = containerWidth - window.innerWidth + 45;
+const initialPosition = containerWidth - window.innerWidth + 50;
 const scrollImage = window.innerWidth > responsibleWidth ? 60 : 45;
 
 verticalParts.forEach((part) => {
