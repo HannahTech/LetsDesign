@@ -106,7 +106,7 @@ const verticalParts = document.querySelectorAll(".vertical-part");
 const responsibleWidth = 950;
 const luxuryImage = document.querySelector(".luxury-image");
 const containerWidth = luxuryImage.offsetWidth;
-const initialPosition = containerWidth - window.innerWidth + 50;
+const initialPosition = containerWidth - window.innerWidth + 45;
 const scrollImage = window.innerWidth > responsibleWidth ? 60 : 45;
 
 verticalParts.forEach((part) => {
