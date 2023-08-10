@@ -403,10 +403,12 @@ body {
 }
 
 .footer {
+  font-family: "Coldiac";
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 35px;
+  font-size: 30px;
+  font-weight: 900;
   padding: 3%;
   background-color: white;
 }
@@ -415,12 +417,13 @@ body {
   display: inline-block;
   margin: 0 10%;
   text-decoration: none;
-  color: #8e8e8e;
-  transition: color 1s;
+  color: black;
+  /* color: rgb(57, 58, 60); */
+  transition: color 0.4s;
 }
 
 .footer a:hover {
-  color: rgb(57, 58, 60);
+  color: #8e8e8e;
 }
 
 @media (orientation: portrait) {
