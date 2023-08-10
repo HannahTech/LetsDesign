@@ -51,7 +51,7 @@ window.addEventListener("DOMContentLoaded", function () {
     const scrollPercentage = calculateScrollPercentage();
     console.log(scrollPercentage);
 
-    const mainFontSize = 100 + scrollPercentage * 100;
+    const mainFontSize = 150 + scrollPercentage * 100;
     const opacity = 1 - scrollPercentage / 15;
 
     const textImage = document.querySelector(".text-container");
