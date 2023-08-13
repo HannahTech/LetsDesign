@@ -65,7 +65,7 @@ window.addEventListener("DOMContentLoaded", function () {
         if (opacity < 0.3) {
           image.style.width = "100%";
         } else {
-          image.style.width = "35%";
+          image.style.width = "55%";
         }
       } else {
         if (opacity < 0.3) {
