@@ -86,9 +86,10 @@ window.addEventListener("DOMContentLoaded", function () {
 
     if (scrollPercentage > scrollImage) {
       const backgroundPosition =
-        window.innerWidth > responsibleWidth
-          ? initialPosition - 0.3 * (scrollPercentage - scrollImage)
-          : initialPosition + 10 - 0.3 * (scrollPercentage - scrollImage);
+        initialPosition - 0.3 * (scrollPercentage - scrollImage);
+      // window.innerWidth > responsibleWidth
+      //   ? initialPosition - 0.3 * (scrollPercentage - scrollImage)
+      //   : initialPosition + 10 - 0.3 * (scrollPercentage - scrollImage);
       moveBackgroundImage(luxuryImage, backgroundPosition);
     } else {
       luxuryImage.style.backgroundPositionX = initialPosition + "px";

@@ -87,6 +87,7 @@ body {
   width: 100%;
   position: fixed;
   top: 15%;
+  z-index: 2;
 }
 
 .heading-text p {
@@ -161,6 +162,8 @@ body {
   height: 100%;
   background-size: cover;
   transition: width 1.5s;
+  z-index: -2;
+  margin-top: 10%;
 }
 
 .image.image-1 {
@@ -168,15 +171,15 @@ body {
 }
 
 .image.image-2 {
-  background-image: url("images/022-bb.jpeg");
+  background-image: url("images/09-bb.jpeg");
 }
 
 .image.image-3 {
-  background-image: url("images/03-bb.jpg");
+  background-image: url("images/08-bb.jpg");
 }
 
 .image.image-4 {
-  background-image: url("images/04.jpeg");
+  background-image: url("images/06-bb.webp");
 }
 
 .text {
@@ -442,6 +445,7 @@ body {
 
 .footer {
   font-family: "Coldiac";
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -547,6 +551,7 @@ body {
   .image-container .image {
     top: 0%;
     width: 100%;
+    margin-top: 0;
   }
 
   .text {
