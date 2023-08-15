@@ -292,11 +292,12 @@ body {
   margin: 0;
   font-weight: 900;
   padding-bottom: 2%;
+  font-size: 2.7em;
 }
 
 .text-part h2 {
   margin: 0;
-  font-size: 20px;
+  font-size: 1.3em;
   font-weight: 100;
 }
 
@@ -305,17 +306,17 @@ body {
   letter-spacing: 0.2em;
   text-decoration: none;
   display: inline-block;
-  padding-top: 2%;
+  padding-top: 5%;
   color: var(--light);
   border-bottom: 0.5px solid var(--light);
-  font-size: 55px;
+  font-size: 3.3em;
 }
 
 .luxury-container {
   position: relative;
   height: 50vh;
   width: 100%;
-  margin-top: 5%;
+  margin-top: 8%;
   background-image: url(images/w1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
