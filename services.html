@@ -129,7 +129,9 @@
 
         if (emailInput.value === "") {
           alertMessage.innerText = "Please fill in your email address.";
-          return false;
+        } else {
+          alertMessage.innerText = "";
+          document.getElementById("userForm").submit();
         }
       }
     </script>
