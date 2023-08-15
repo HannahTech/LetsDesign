@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
     } else {
         echo '<script>
         alert("Information saved successfully.");
-        nextStep(4);
+        window.location.href = "services.html"; nextStep(4);
       </script>';
     }
 
