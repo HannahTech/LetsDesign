@@ -459,12 +459,16 @@ body {
   background-color: white;
 }
 
-.footer a {
-  display: inline-block;
-  margin: 0 10%;
+.sub-footer {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-footer a {
   text-decoration: none;
   color: black;
-  /* color: rgb(57, 58, 60); */
   transition: color 0.4s;
 }
 
@@ -645,18 +649,18 @@ body {
     row-gap: 6%;
   }
 
-  .footer {
-    padding: 10% 0;
-    font-size: 20px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    text-align: left;
-    gap: 20px;
-    justify-content: center;
+  .sub-footer {
+    width: 75%;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .footer a {
-    display: block;
-    margin: 0 15%;
+  .footer {
+    font-size: 20px;
+    text-align: left;
+    padding: 5%;
+  }
+  .sub-footer a {
+    padding: 5% 0;
   }
 }
