@@ -15,9 +15,9 @@ if (isset($_POST['submit'])) {
     $firstName = $_POST['firstName'];
     $emailAddress = $_POST['emailAddress'];
 
-    $sql = "INSERT INTO userinfo (firstName, emailAddress, services) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO userinfo(firstName, emailAddress, services) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sss", $services, $firstName, $emailAddress);
+    $stmt->bind_param("sss", $firstName, $emailAddress, $services);
 
     if ($stmt->execute()) {
         echo "Data inserted successfully!";

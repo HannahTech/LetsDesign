@@ -95,22 +95,9 @@
         var currentStepDiv = document.getElementById("step" + currentStep);
         var nextStepDiv = document.getElementById("step" + step);
 
-        if (validateStep(currentStep)) {
-          currentStepDiv.style.display = "none";
-          nextStepDiv.style.display = "block";
-          currentStep = step;
-        }
-      }
-
-      function validateStep(step) {
-        if (step === 3) {
-          var userEmail = document.getElementById("userEmail").value;
-          if (userEmail.trim() === "") {
-            alert("Please enter your email address.");
-            return false;
-          }
-        }
-        return true;
+        currentStepDiv.style.display = "none";
+        nextStepDiv.style.display = "block";
+        currentStep = step;
       }
     </script>
   </body>
