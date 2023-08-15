@@ -10,17 +10,15 @@ if (!$conn) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+$alertMessage = "";
+
 if (isset($_POST['submit'])) {
     $services = implode(', ', $_POST['services']);
     $firstName = $_POST['firstName'];
     $emailAddress = $_POST['emailAddress'];
-    
+
     if (empty($emailAddress)) {
-        echo '<script>
-            alert("Please fill in your email address.");
-            window.history.back();
-          </script>';
-        exit;
+        $alertMessage = "Please fill in your email address.";
     }
     $sql = "INSERT INTO userinfo(firstName, emailAddress, services) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
