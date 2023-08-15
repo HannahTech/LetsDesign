@@ -14,7 +14,14 @@ if (isset($_POST['submit'])) {
     $services = implode(', ', $_POST['services']);
     $firstName = $_POST['firstName'];
     $emailAddress = $_POST['emailAddress'];
-
+    
+    if (empty($emailAddress)) {
+        echo '<script>
+            alert("Please fill in your email address.");
+            window.history.back();
+          </script>';
+        exit;
+    }
     $sql = "INSERT INTO userinfo(firstName, emailAddress, services) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sss", $firstName, $emailAddress, $services);
