@@ -1,4 +1,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/letsd851/public_html/
-    - /bin/cp -a * $DEPLOYPATH
+    - /bin/cp -r * $DEPLOYPATH
