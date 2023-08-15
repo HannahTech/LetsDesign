@@ -459,7 +459,7 @@ body {
   }
 
   .menu::after {
-    content: "L D";
+    content: "";
   }
 
   .heading-text {
