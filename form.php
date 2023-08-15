@@ -24,6 +24,8 @@ if (isset($_POST['submit'])) {
             alert("We couldn\'t save your information. Please send us an email to send you Price List.");
             window.location.href = "index.html";
           </script>';
+    } else {
+        header("Location: services.html?step=4");
     }
 
     $stmt->close();

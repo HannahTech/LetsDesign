@@ -61,13 +61,7 @@
             <input type="email" id="userEmail" name="emailAddress" /> </label
           ><br />
           <br />
-          <input
-            id="submit"
-            type="submit"
-            value="Submit"
-            name="submit"
-            onclick="nextStep(4); return false;"
-          />
+          <input id="submit" type="submit" value="Submit" name="submit" />
         </div>
       </form>
 
@@ -104,6 +98,20 @@
         currentStepDiv.style.display = "none";
         nextStepDiv.style.display = "block";
         currentStep = step;
+      }
+
+      function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return "";
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+
+      if (getParameterByName("step") === "4") {
+        nextStep(4);
       }
     </script>
   </body>
