@@ -20,9 +20,13 @@ if (isset($_POST['submit'])) {
     $stmt->bind_param("sss", $firstName, $emailAddress, $services);
 
     if ($stmt->execute()) {
-        echo "Data inserted successfully!";
+        echo '<script>
+                window.location.href = "services.html#step4";
+              </script>';
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo '<script>
+                window.location.href = "index.html";
+              </script>';
     }
 
     $stmt->close();
