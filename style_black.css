@@ -56,32 +56,6 @@ body {
   z-index: 100;
 }
 
-/* Image Menu */
-
-/* .menu {
-  padding: 2.5% 5%;
-  text-align: left;
-  transform: translateY(0);
-  transition: transform 3s;
-  position: absolute;
-  top: 15%;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-}
-
-.menu img {
-  width: 5%;
-  height: 5%;
-}
-.menu.sticky {
-  color: black;
-  position: fixed;
-  transform: translateY(-75%);
-  z-index: 100;
-  opacity: 1;
-} */
-
 .menu:hover {
   cursor: pointer;
 }
@@ -110,7 +84,6 @@ body {
 }
 
 .text-container {
-  /* font-family: "Vesta-Serif"; */
   font-family: "GreatVibes";
   position: absolute;
   width: 100%;
@@ -191,8 +164,6 @@ body {
 
 .text {
   font-family: "Coldiac";
-  /* Coldiac
-  Nord-Bold*/
   position: absolute;
   right: 25%;
   bottom: 1%;
@@ -262,14 +233,6 @@ body {
   transform: translate(-10%, -10%) rotate(0deg);
   white-space: normal;
 }
-
-/* .vertical-part:hover .text a {
-  display: block;
-  text-decoration: underline;
-  color: white;
-  text-align: center;
-  padding-top: 30%;
-} */
 
 .vertical-part:hover .text span {
   padding-top: 50px;
@@ -469,7 +432,6 @@ body {
   margin: 0 10%;
   text-decoration: none;
   color: var(--light);
-  /* color: rgb(57, 58, 60); */
   transition: color 0.4s;
 }
 
@@ -493,16 +455,6 @@ body {
   .menu::after {
     content: "L D";
   }
-  /* Image Menu */
-  /* .menuI {
-    top: 8%;
-    left: 2%;
-  }
-
-  .menuI img {
-    width: 9%;
-    height: 9%;
-  } */
 
   .heading-text {
     width: auto;
@@ -523,7 +475,6 @@ body {
   .container {
     position: fixed;
     display: grid;
-    /* grid-template-rows: repeat(4, 1fr); */
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     row-gap: 3%;
@@ -538,22 +489,6 @@ body {
     width: 80%;
     padding-left: 10%;
   }
-
-  /* .image.image-1 {
-    background-image: url("images/m1.jpg");
-  }
-
-  .image.image-2 {
-    background-image: url("images/m2.jpg");
-  }
-
-  .image.image-3 {
-    background-image: url("images/m3.jpg");
-  }
-
-  .image.image-4 {
-    background-image: url("images/m5.jpg");
-  } */
 
   .image-container {
     padding-top: 0;
@@ -594,7 +529,6 @@ body {
   }
 
   .vertical-part:hover .text span {
-    /* display: none; */
     padding-top: 10px;
     display: inline-block;
     border-top: 0.5px solid white;
