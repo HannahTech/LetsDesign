@@ -68,6 +68,10 @@ body {
   z-index: 2;
 }
 
+.heading-text h1 {
+  font-size: 2.5em;
+}
+
 .heading-text p {
   display: none;
 }
