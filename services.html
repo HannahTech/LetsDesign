@@ -57,19 +57,15 @@
           <hr />
           <label
             >Your Email
-            <input type="email" id="userEmail" name="emailAddress" /> </label
+            <input
+              type="email"
+              id="userEmail"
+              name="emailAddress"
+              required
+            /> </label
           ><br />
           <br />
-          <input
-            id="submit"
-            type="submit"
-            value="Submit"
-            name="submit"
-            onclick="validateForm();"
-          />
-          <p id="alertMessage" style="color: red">
-            <?php echo $alertMessage; ?>
-          </p>
+          <input id="submit" type="submit" value="Submit" name="submit" />
         </div>
       </form>
 
@@ -121,18 +117,6 @@
 
       if (getParameterByName("step") === "4") {
         nextStep(4);
-      }
-
-      function validateForm() {
-        var emailInput = document.getElementById("userEmail");
-        var alertMessage = document.getElementById("alertMessage");
-
-        if (emailInput.value === "") {
-          alertMessage.innerText = "Please fill in your email address.";
-        } else {
-          alertMessage.innerText = "";
-          document.getElementById("userForm").submit();
-        }
       }
     </script>
   </body>
