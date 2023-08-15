@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
 
     if ($stmt->execute()) {
         echo '<script>
-                window.location.href = "services.html";
+                window.location.href = "services.html"; nextStep(4);
               </script>';
     } else {
         echo '<script>
