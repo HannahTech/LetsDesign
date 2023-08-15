@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     const scrollThreshold = window.matchMedia("(orientation: portrait)").matches
       ? 7
-      : 25;
+      : 20;
 
     if (scrollPercentage < scrollThreshold) {
       window.scrollBy(0, 1);
@@ -134,23 +134,23 @@ verticalParts.forEach((part) => {
 var originalImages = [
   "url(images/heto/1.jpg)",
   "url(images/heto/2.jpg)",
+  "url(images/heto/5.jpg)",
+  "url(images/heto/5-2.jpg)",
   "url(images/heto/3.jpg)",
   "url(images/heto/4.jpg)",
-  "url(images/heto/5.jpg)",
-  "url(images/heto/6.jpg)",
-  "url(images/heto/1-2.jpg)",
-  "url(images/heto/2-2.jpg)",
+  "url(images/med_chatbot.jpg)",
+  "url(images/health.jpg)",
 ];
 
 var hoverImages = [
   "url(images/heto/1-2.jpg)",
   "url(images/heto/2-2.jpg)",
-  "url(images/heto/3-2.jpg)",
-  "url(images/heto/4-2.jpg)",
-  "url(images/heto/5-2.jpg)",
-  "url(images/heto/6-2.jpg)",
-  "url(images/heto/1.jpg)",
-  "url(images/heto/2.jpg)",
+  "url(images/heto/88.jpg)",
+  "url(images/heto/77.jpg)",
+  "url(images/heto/3-22.jpg)",
+  "url(images/heto/66.jpg)",
+  "url(images/med_chatbot-2.jpg)",
+  "url(images/health-2.jpg)",
 ];
 
 const projectsImages = document.querySelectorAll(".projects-image");

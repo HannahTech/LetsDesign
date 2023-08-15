@@ -247,7 +247,7 @@ body {
   font-family: "Coldiac";
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   margin: 0 auto;
   padding-top: 5%;
   text-align: center;
@@ -282,7 +282,7 @@ body {
 
 .luxury-container {
   position: relative;
-  height: 50vh;
+  height: 70vh;
   width: 100%;
   margin-top: 8%;
   background-image: url(images/w1.jpg);
