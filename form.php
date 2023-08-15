@@ -18,19 +18,19 @@ if (isset($_POST['submit'])) {
     $emailAddress = $_POST['emailAddress'];
 
     if (empty($emailAddress)) {
-        $alertMessage = "Please fill in your email address.";
+        $alertMessage = "Please fill your email address.";
+
     }
     $sql = "INSERT INTO userinfo(firstName, emailAddress, services) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sss", $firstName, $emailAddress, $services);
 
     if (!$stmt->execute()) {
-        echo '<script>
-            alert("We couldn\'t save your information. Please send us an email to send you Price List.");
-            window.location.href = "index.html";
-          </script>';
+        $alertMessage = "We couldn't save your information. Please send us an email to send you the Price List.";
+
     } else {
         header("Location: services.html?step=4");
+        exit;
     }
 
     $stmt->close();
