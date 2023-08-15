@@ -192,13 +192,14 @@ body {
 }
 
 .number {
-  position: absolute;
+  display: none;
+  /* position: absolute;
   font-weight: 700;
   bottom: -3%;
   left: 13%;
   transform: translateX(-50%);
   font-size: 5rem;
-  color: white;
+  color: white; */
 }
 
 .vertical-part:hover .number {
@@ -513,9 +514,10 @@ body {
   }
 
   .number {
-    left: 22%;
+    display: none;
+    /* left: 22%;
     font-size: 40px;
-    bottom: -5%;
+    bottom: -5%; */
   }
 
   .vertical-part:hover .text {
