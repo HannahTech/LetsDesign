@@ -149,7 +149,7 @@ input[type="email"]:focus {
   border: 2px solid #034269;
 }
 p {
-  font-size: large;
+  font-size: 1.25em;
 }
 
 @media (max-width: 950px) {
