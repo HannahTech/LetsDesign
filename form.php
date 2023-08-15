@@ -19,14 +19,16 @@ if (isset($_POST['submit'])) {
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sss", $firstName, $emailAddress, $services);
 
-    if ($stmt->execute()) {
+    if (!$stmt->execute()) {
         echo '<script>
-                window.location.href = "services.html"; nextStep(4);
-              </script>';
+            alert("We couldn\'t save your information. Please send us an email to send you Price List.");
+            window.location.href = "index.html";
+          </script>';
     } else {
         echo '<script>
-                window.location.href = "index.html";
-              </script>';
+        alert("Information saved successfully.");
+        nextStep(4);
+      </script>';
     }
 
     $stmt->close();
