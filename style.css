@@ -448,7 +448,6 @@ body {
 .all-card-container {
   position: relative;
   width: 100%;
-  /* height: 65vh; */
   text-align: left;
   background-color: rgb(235, 235, 235);
   z-index: 5;
@@ -685,5 +684,37 @@ ul {
   }
   .sub-footer a {
     padding: 5% 0;
+  }
+
+  .all-card-container h1 {
+    font-size: 1.2em;
+    padding: 5%;
+  }
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1.5em;
+    width: 75%;
+    padding: 3% 12.5%;
+  }
+  .card-front p {
+    font-size: 0.8em;
+  }
+  .card img {
+    max-height: 25px;
+    margin-bottom: 0;
+  }
+
+  .card h2 {
+    font-size: 0.75em;
+  }
+
+  .card-text,
+  ul {
+    font-size: 0.65em;
+    color: #555;
+    margin-top: 0;
+    padding: 0 0%;
+    line-height: 1.75em;
   }
 }
