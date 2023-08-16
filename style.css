@@ -686,6 +686,9 @@ ul {
     padding: 5% 0;
   }
 
+  .all-card-container {
+    padding-bottom: 10%;
+  }
   .all-card-container h1 {
     font-size: 1.2em;
     padding: 5%;
