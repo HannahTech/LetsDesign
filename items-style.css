@@ -14,6 +14,10 @@
   font-family: "Vesta-Serif";
   src: url("fonts/Solar\ Vesta\ Serif.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Helvetica";
+  src: url("fonts/HelveticaNeue.otf") format("truetype");
+}
 :root {
   --dark: #333333;
   --light: #d5cdc4;
@@ -55,9 +59,13 @@ body {
   color: black;
 }
 
+.menu-icon,
+.menu-popup {
+  display: none;
+}
+
 .menu-items span {
-  font-family: Alliance, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+  font-family: "Helvetica";
   font-size: 0.4em;
   font-weight: 200;
   padding-left: 50px;
@@ -93,7 +101,7 @@ body {
 }
 
 .heading-text span {
-  font-family: Helvetica Neue, Arial, Noto Sans, sans-serif;
+  font-family: "Helvetica";
   font-size: 1.5em;
   font-weight: 200;
   letter-spacing: 0.15em;
@@ -126,7 +134,7 @@ body {
 }
 
 .client-item span {
-  font-family: Helvetica Neue, Arial, Noto Sans, sans-serif;
+  font-family: "Helvetica";
   font-size: 1.2em;
   font-weight: 200;
   letter-spacing: 0.1em;
@@ -146,10 +154,12 @@ body {
   width: 55%;
   padding-top: 4%;
   padding-bottom: 4%;
-  font-family: Helvetica Neue, Arial, Noto Sans, sans-serif;
+  font-family: "Helvetica";
   font-size: 1.3em;
   font-weight: 200;
   letter-spacing: 0.11em;
+  line-height: 1.6;
+  text-align: justify;
 }
 
 .row {
@@ -183,7 +193,7 @@ body {
 }
 
 .question-form form {
-  font-family: Helvetica Neue, Arial, Noto Sans, sans-serif;
+  font-family: "Helvetica";
   font-weight: 200;
   max-width: 100%;
   margin: auto;
@@ -209,6 +219,23 @@ body {
   resize: vertical;
 }
 
+.contact-footer {
+  display: none;
+  font-family: "Coldiac";
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 900;
+  padding: 3%;
+  background-color: white;
+  top: 10%;
+}
+
+.contact-footer a:hover {
+  color: #8e8e8e;
+}
 .question-form input[type="submit"] {
   background-color: rgb(180, 180, 180);
   color: rgb(51, 51, 51);
@@ -247,13 +274,14 @@ body {
   transition: transform 0.5s;
 }
 
-.work-items p {
-  font-family: Helvetica Neue, Arial, Noto Sans, sans-serif;
+.work-items h3 {
+  font-family: "Helvetica";
   font-size: 1.2em;
   font-weight: 300;
   padding-top: 0%;
   letter-spacing: 0.1em;
-  width: 60%;
+  line-height: 1.5;
+  width: 100%;
   padding-left: 0;
 }
 
@@ -292,38 +320,114 @@ body {
 }
 
 @media (orientation: portrait) {
+  .background-image {
+    height: 30%;
+    background-position: center center;
+  }
   .text-container {
     display: none !important;
   }
   .first-text-container {
     height: 85vh;
   }
+
+  .row {
+    max-height: 100%;
+    display: grid;
+  }
+
+  .question-form {
+    margin-left: 0;
+  }
+
   .menu {
     font-size: 25px;
     top: 7%;
     left: 0%;
+    z-index: 99999;
   }
 
   .menu::after {
     content: "";
   }
 
+  .menu-items {
+    display: none;
+    z-index: 99999;
+  }
+
+  .menu-icon {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 99999;
+  }
+
+  .menu-popup {
+    display: none;
+    font-family: "Helvetica";
+    position: fixed;
+    top: 5%;
+    right: 10%;
+    background-color: #fff;
+    width: 40%;
+    height: 30%;
+    padding: 20px;
+    z-index: 99998;
+  }
+
+  .menu-popup ul {
+    list-style-type: none;
+  }
+
+  .menu-popup .menu-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding-bottom: 25px;
+  }
+
+  .menu-item:hover {
+    font-size: 1.1em;
+  }
+
+  .row-work {
+    display: grid;
+  }
   .heading-text {
     width: 100%;
     top: 5%;
     padding: 0 10%;
+    margin-top: 30%;
+  }
+
+  .heading-text span {
+    margin-left: 0;
   }
 
   .heading-text p {
     display: block;
-    font-family: "GreatVibes";
-    font-size: 35px;
+    width: 70%;
+    padding-left: 12%;
+    font-size: 18px;
     letter-spacing: 0.08em;
   }
   .heading-text h1 {
-    display: none;
+    font-size: 40px;
   }
 
+  .client-list {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3em;
+  }
+
+  .client-list span {
+    text-align: left;
+  }
   .sub-footer {
     width: 75%;
     flex-direction: column;
@@ -335,6 +439,15 @@ body {
     text-align: left;
     padding: 5%;
   }
+
+  .contact-footer {
+    margin-top: 20%;
+    display: block;
+    font-size: 20px;
+    text-align: left;
+    padding: 5%;
+  }
+
   .sub-footer a {
     padding: 5% 0;
   }

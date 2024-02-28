@@ -14,6 +14,11 @@
   font-family: "Vesta-Serif";
   src: url("fonts/Solar\ Vesta\ Serif.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Helvetica";
+  src: url("fonts/HelveticaNeue.otf") format("truetype");
+}
+
 :root {
   --dark: #333333;
   --light: #d5cdc4;
@@ -46,9 +51,13 @@ body {
   align-items: center;
 }
 
+.menu-icon,
+.menu-popup {
+  display: none;
+}
+
 .menu-items span {
-  font-family: Alliance, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+  font-family: "Helvetica";
   font-size: 0.4em;
   font-weight: 200;
   padding-left: 50px;
@@ -546,6 +555,7 @@ ul {
   .first-text-container {
     height: 85vh;
   }
+
   .menu {
     font-size: 25px;
     top: 7%;
@@ -554,6 +564,46 @@ ul {
 
   .menu::after {
     content: "";
+  }
+
+  .menu-items {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+
+  .menu-popup {
+    display: none;
+    font-family: "Helvetica";
+    position: fixed;
+    top: 25%;
+    right: 1%;
+    background-color: #fff;
+    width: 40%;
+    height: 40%;
+    padding: 20px;
+    z-index: 9998;
+  }
+
+  .menu-popup ul {
+    list-style-type: none;
+  }
+
+  .menu-popup .menu-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .menu-item:hover {
+    font-size: 1.15em;
   }
 
   .heading-text {
@@ -709,7 +759,7 @@ ul {
   }
   .card-container {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 1.5em;
     width: 75%;
     padding: 3% 12.5%;

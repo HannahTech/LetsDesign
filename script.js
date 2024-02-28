@@ -20,6 +20,21 @@ window.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  document.querySelector(".menu-icon").addEventListener("click", function () {
+    document.querySelector(".menu-popup").style.display =
+      document.querySelector(".menu-popup").style.display === "block"
+        ? "none"
+        : "block";
+  });
+
+  document.querySelectorAll(".menu-item").forEach(function (item) {
+    item.addEventListener("click", function () {
+      const text = this.textContent.trim().toLowerCase();
+      const page = getPageName(text);
+      window.location.href = `${page}.html`;
+    });
+  });
+
   function getPageName(text) {
     switch (text) {
       case "about us":
