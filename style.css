@@ -38,13 +38,26 @@ body {
   transform: translateY(0);
   transition: transform 3s;
   position: absolute;
-  top: 10%;
+  top: 13%;
   left: 0;
-  width: 100%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.menu::after {
-  content: "Let'sDesign";
+.menu-items span {
+  font-family: Alliance, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+  font-size: 0.4em;
+  font-weight: 200;
+  padding-left: 50px;
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+.menu-items span:hover {
+  font-weight: 500;
+  color: rgb(162, 118, 46);
 }
 .menu.sticky {
   color: black;
@@ -85,6 +98,7 @@ body {
 }
 
 .text-container {
+  display: none !important;
   font-family: "GreatVibes";
   position: absolute;
   width: 100%;
@@ -93,7 +107,7 @@ body {
   left: 0;
   background: #fff;
   color: #000;
-  display: flex;
+  /* display: flex; */
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -139,7 +153,7 @@ body {
   position: absolute;
   top: 25%;
   left: 0;
-  width: 100%;
+  width: 70%;
   height: 100%;
   background-size: cover;
   transition: width 1.5s;
@@ -198,12 +212,12 @@ body {
 .number {
   display: none;
   /* position: absolute;
-  font-weight: 700;
-  bottom: -3%;
-  left: 13%;
-  transform: translateX(-50%);
-  font-size: 5rem;
-  color: white; */
+    font-weight: 700;
+    bottom: -3%;
+    left: 13%;
+    transform: translateX(-50%);
+    font-size: 5rem;
+    color: white; */
 }
 
 .vertical-part:hover .number {
@@ -422,7 +436,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 30px;
+  font-size: 1.5em;
   font-weight: 900;
   padding: 3%;
   background-color: white;
@@ -461,11 +475,11 @@ body {
 }
 .card-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 3em;
-  width: 60%;
-  padding: 3% 20%;
+  width: 50%;
+  padding: 3% 25%;
 }
 
 .card {
@@ -582,7 +596,7 @@ ul {
 
   .image-container .image {
     top: 0%;
-    width: 100%;
+    width: 70%;
     margin-top: 0;
   }
 
@@ -600,8 +614,8 @@ ul {
   .number {
     display: none;
     /* left: 22%;
-    font-size: 40px;
-    bottom: -5%; */
+      font-size: 40px;
+      bottom: -5%; */
   }
 
   .vertical-part:hover .text {

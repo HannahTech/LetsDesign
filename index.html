@@ -22,10 +22,42 @@
       </div>
     </div>
 
-    <div class="menu" onclick="window.location.href = 'services.html'"></div>
+    <!-- Calendly badge widget begin -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        Calendly.initBadgeWidget({
+          url: "https://calendly.com/let-s-design",
+          text: "Book Free Meeting",
+          color: "#e4ca47",
+          textColor: "#ffffff",
+          branding: true,
+        });
+      };
+    </script>
+    <!-- Calendly badge widget end -->
+
+    <!-- <div class="menu" onclick="window.location.href = 'services.html'"></div> -->
+
+    <div class="menu">
+      <span class="menu-text">Let'sDesign</span>
+      <div class="menu-items">
+        <span>About Us</span>
+        <span>Contact</span>
+        <span>Our Work</span>
+      </div>
+    </div>
 
     <div class="heading-text">
-      <p class="heading-logo">Let's Design</p>
+      <!-- <p class="heading-logo">Let's Design</p> -->
 
       <h1>Your Success, &nbsp;Our Expertise</h1>
     </div>
@@ -107,7 +139,7 @@
             <img src="images/persis1.jpg" />
           </div>
           <div class="image-preview">
-            <img src="images/persil.jpg" />
+            <img src="images/persis5.jpg" />
           </div>
         </div>
 
@@ -255,7 +287,7 @@
             </div>
           </div>
         </div>
-        <div class="card">
+        <!-- <div class="card">
           <div class="card-inner">
             <div class="card-front">
               <img src="images/logos/interior.png" />
@@ -286,7 +318,7 @@
               </ul>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -298,11 +330,8 @@
           target="_blank"
           >Price List</a
         >
-        <a
-          href="mailto:hi@letsdesign.ca?subject=Meeting%20time&body=Hello%20LetsDesign%0ACan%20We%20Set%20A%20Meeting%20Time?"
-          target="_blank"
-          >Connect Us</a
-        >
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="about.html" target="_blank">About</a>
       </div>
     </div>
     <script src="script.js"></script>

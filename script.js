@@ -1,10 +1,37 @@
 window.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector(".menu");
   const container = document.querySelector(".container");
+  const menuText = document.querySelector(".menu-text");
+  const menuItems = document.querySelectorAll(".menu-items span");
 
   const containerOffsetTop = container.offsetTop - 200;
 
   let isMenuSticky = false;
+
+  menuText.addEventListener("click", function () {
+    window.location.href = "services.html";
+  });
+
+  menuItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      const text = this.textContent.trim().toLowerCase();
+      const page = getPageName(text);
+      window.location.href = `${page}.html`;
+    });
+  });
+
+  function getPageName(text) {
+    switch (text) {
+      case "about us":
+        return "about";
+      case "contact":
+        return "contact";
+      case "our work":
+        return "work";
+      default:
+        return "index";
+    }
+  }
 
   function toggleStickyMenu() {
     if (window.pageYOffset >= containerOffsetTop && !isMenuSticky) {
@@ -33,7 +60,7 @@ window.addEventListener("DOMContentLoaded", function () {
       setTimeout(autoScroll, 10);
     }
   }
-  setTimeout(autoScroll, 2000);
+  setTimeout(autoScroll, 500);
 
   let ticking = false;
 
@@ -49,7 +76,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   function handleScroll() {
     const scrollPercentage = calculateScrollPercentage();
-    console.log(scrollPercentage);
+    // console.log(scrollPercentage);
 
     const mainFontSize = 150 + scrollPercentage * 100;
     const opacity = 1 - scrollPercentage / 15;
@@ -62,16 +89,16 @@ window.addEventListener("DOMContentLoaded", function () {
       const imageText = container.querySelector(".text");
 
       if (window.matchMedia("(orientation: portrait)").matches) {
-        if (opacity < 0.3) {
-          image.style.width = "100%";
+        if (opacity < 0.5) {
+          image.style.width = "70%";
         } else {
           image.style.width = "55%";
         }
       } else {
-        if (opacity < 0.3) {
+        if (opacity < 0.5) {
           image.style.width = "50%";
         } else {
-          image.style.width = "100%";
+          image.style.width = "70%";
         }
       }
     });
