@@ -24,7 +24,7 @@
         <a href="about.html"><span>About</span></a>
         <a href="work.html"><span>Our Work</span></a>
       </div>
-      <div class="menu-icon">&#9633;</div>
+      <div class="menu-icon">&#9776;</div>
       <div class="menu-popup">
         <ul>
           <li class="menu-item">Home</li>
@@ -35,10 +35,17 @@
     </div>
 
     <div class="heading-text">
-      <h1>Contact Us Now</h1>
-      <span
+      <h1 class="mobile-hidden">Contact Us Now</h1>
+      <h1 class="pc-hidden">Contact Us</h1>
+      <span class="mobile-hidden"
         >Lets Design :
         <a href="mailto:hi@letsdesign.ca" target="_blank"
+          >hi@letsdesign.ca</a
+        ></span
+      >
+
+      <span class="pc-hidden"
+        ><a href="mailto:hi@letsdesign.ca" target="_blank"
           >hi@letsdesign.ca</a
         ></span
       >
@@ -64,19 +71,20 @@
       <!-- Calendly inline widget end -->
 
       <div class="question-form">
-        <form
-          action="mailto:hi@letsdesign.ca"
-          method="post"
-          enctype="text/plain"
-        >
-          <label for="name">Your Name:</label><br />
-          <input type="text" id="name" name="name" /><br />
-          <label for="email">Your Email:</label><br />
-          <input type="email" id="email" name="email" /><br />
-          <label for="message">Your Message:</label><br />
-          <textarea id="message" name="message" rows="4" cols="50"></textarea
+        <form action="contact.php" method="POST">
+          <label for="firstName">Your Name:</label><br />
+          <input type="text" id="firstName" name="firstName" /><br />
+          <label for="emailAddress">Your Email:</label><br />
+          <input type="email" id="emailAddress" name="emailAddress" /><br />
+          <label for="userMessage">Your Message:</label><br />
+          <textarea
+            id="userMessage"
+            name="userMessage"
+            rows="4"
+            cols="50"
+          ></textarea
           ><br /><br />
-          <input type="submit" value="Submit" />
+          <input id="submit" type="submit" value="Submit" name="submit" />
         </form>
       </div>
     </div>

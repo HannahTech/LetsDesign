@@ -72,14 +72,15 @@ body {
   transition: color 0.3s, font-weight 0.3s;
 }
 
+.menu-items span:hover {
+  font-weight: 500;
+  color: rgb(162, 118, 46);
+}
+
 .menu-items a,
 .menu a {
   text-decoration: none;
   color: black;
-}
-.menu-items span:hover {
-  font-weight: 500;
-  color: rgb(162, 118, 46);
 }
 
 .menu:hover {
@@ -94,6 +95,9 @@ body {
   width: 90%;
   z-index: 2;
   margin-top: 10%;
+}
+.pc-hidden {
+  display: none;
 }
 
 .heading-text h1 {
@@ -320,6 +324,14 @@ body {
 }
 
 @media (orientation: portrait) {
+  .mobile-hidden {
+    display: none;
+  }
+
+  .pc-hidden {
+    display: block;
+  }
+
   .background-image {
     height: 30%;
     background-position: center center;
@@ -332,17 +344,19 @@ body {
   }
 
   .row {
-    max-height: 100%;
+    max-height: 110%;
     display: grid;
   }
 
   .question-form {
     margin-left: 0;
+    z-index: 99999;
   }
 
   .menu {
     font-size: 25px;
-    top: 7%;
+    top: 0;
+    height: 10%;
     left: 0%;
     z-index: 99999;
   }
@@ -353,15 +367,13 @@ body {
 
   .menu-items {
     display: none;
-    z-index: 99999;
   }
 
   .menu-icon {
     display: block;
-    position: fixed;
-    top: 20px;
-    right: 50px;
-    font-size: 50px;
+    position: absolute;
+    right: 30px;
+    font-size: 35px;
     cursor: pointer;
     z-index: 99999;
   }
@@ -369,16 +381,16 @@ body {
   .menu-popup {
     display: none;
     font-family: "Helvetica";
-    position: fixed;
-    top: 5%;
+    font-size: 0.8em;
+    position: absolute;
+    top: 25%;
     right: 10%;
     background-color: #fff;
-    width: 40%;
-    height: 30%;
+    width: 45%;
+    height: 200px;
     padding: 20px;
     z-index: 99998;
   }
-
   .menu-popup ul {
     list-style-type: none;
   }
@@ -395,9 +407,20 @@ body {
 
   .row-work {
     display: grid;
+    margin-left: 20%;
   }
+
+  .work-items {
+    width: 250px;
+  }
+
+  .work-items img {
+    width: 250px;
+    height: 250px;
+  }
+
   .heading-text {
-    width: 100%;
+    width: 80%;
     top: 5%;
     padding: 0 10%;
     margin-top: 30%;
@@ -441,7 +464,7 @@ body {
   }
 
   .contact-footer {
-    margin-top: 20%;
+    margin-top: 0%;
     display: block;
     font-size: 20px;
     text-align: left;
