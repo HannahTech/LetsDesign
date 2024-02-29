@@ -345,12 +345,15 @@ body {
 
   .row {
     max-height: 110%;
-    display: grid;
+    /* display: flex; */
+    flex-direction: column-reverse;
   }
 
   .question-form {
     margin-left: 0;
     z-index: 99999;
+    order: 1;
+    margin: 20% 0;
   }
 
   .menu {
@@ -441,8 +444,12 @@ body {
     font-size: 40px;
   }
 
+  .calendly-inline-widget {
+    order: 0;
+  }
   .client-list {
     width: 60%;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3em;
@@ -464,7 +471,7 @@ body {
   }
 
   .contact-footer {
-    margin-top: 0%;
+    margin-top: 50%;
     display: block;
     font-size: 20px;
     text-align: left;
