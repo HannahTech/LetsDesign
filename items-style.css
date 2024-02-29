@@ -57,6 +57,14 @@ body {
   justify-content: space-between;
   align-items: center;
   color: black;
+  z-index: 5;
+}
+
+.menu.scrolled {
+  background-color: rgb(255, 255, 255);
+  top: 0;
+  padding: 3% 5% 1% 5%;
+  z-index: 3;
 }
 
 .menu-icon,
@@ -172,6 +180,7 @@ body {
   max-height: 50%;
   margin: auto;
   margin-top: 6%;
+  z-index: 1;
 }
 .book-time {
   text-align: center;
@@ -194,6 +203,7 @@ body {
 .question-form {
   flex: 1;
   margin-left: 70px;
+  z-index: 1;
 }
 
 .question-form form {
@@ -293,6 +303,10 @@ body {
   transform: scale(1.05);
 }
 
+.contact-footer {
+  display: none;
+}
+
 .footer {
   font-family: "Coldiac";
   position: relative;
@@ -345,13 +359,13 @@ body {
 
   .row {
     max-height: 110%;
-    /* display: flex; */
     flex-direction: column-reverse;
+    z-index: 1;
   }
 
   .question-form {
     margin-left: 0;
-    z-index: 99999;
+    z-index: 2;
     order: 1;
     margin: 20% 0;
   }
