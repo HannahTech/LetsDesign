@@ -88,6 +88,19 @@ body {
   margin:20px;
   height: auto;
 }
+@media (orientation: portrait) {
+  body{
+height:auto;
+  }
+  .popup-content{
+    width: 90%
+  }
+  .popup-content img {
+    width: 150px;
+    margin:10px;
+    height: auto;
+  }
+}
 </style>
 </head>
 <body>
