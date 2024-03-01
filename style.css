@@ -61,10 +61,11 @@ body {
   font-size: 0.4em;
   font-weight: 200;
   padding-left: 50px;
-  transition: color 0.3s, font-weight 0.3s;
+  transition: color 0.3s, font-weight 0.3s, font-size 0.3s;
 }
 
 .menu-items span:hover {
+  font-size: 0.45em;
   font-weight: 500;
   color: rgb(162, 118, 46);
 }
@@ -74,12 +75,12 @@ body {
   position: fixed;
   z-index: 100;
   padding: 0% 5%;
-  text-align: left;
+  text-align: right;
   color: transparent;
   font-size: 38px;
   letter-spacing: 0.1em;
   top: 5%;
-  left: 65%;
+  left: 60%;
   width: 90%;
   display: flex;
   justify-content: space-between;
