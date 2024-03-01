@@ -51,3 +51,55 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+function openWindow(image1, image2, description) {
+  var width = window.innerWidth * 0.6;
+  var height = window.innerHeight * 0.6;
+  var left = (window.innerWidth - width) / 2;
+  var top = (window.innerHeight - height) / 2;
+
+  var windowFeatures = `width=${width},height=${height},top=${top},left=${left},menubar=no,location=no,resizable=yes,scrollbars=yes,status=no`;
+
+  var popup = window.open("", "Image Window", windowFeatures);
+
+  var html = `
+<html>
+<head>
+<title>Project Details</title>
+<style>
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: "Helvetica";
+  font-size: 1.5em;
+  line-height:1.5;
+  font-weight: 100;
+}
+.popup-content {
+  text-align: center;
+  width: 80%;
+}
+.popup-content img {
+  width: 300px;
+  margin:20px;
+  height: auto;
+}
+</style>
+</head>
+<body>
+<div class="popup-content">
+  <img src="images/${image1}">
+  <img src="images/${image2}">
+  <p>${description}</p>
+</div>
+</body>
+</html>
+`;
+
+  popup.document.write(html);
+  popup.document.close();
+}
