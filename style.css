@@ -94,7 +94,8 @@ body {
   z-index: 100;
 }
 
-.menu:hover {
+.menu:hover,
+.menu2:hover {
   cursor: pointer;
 }
 
